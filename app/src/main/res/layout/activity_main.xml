@@ -19,7 +19,7 @@
         android:layout_centerInParent="true"
         android:text="Welcome to Easy ChatGPT\nTry it out now"
         android:gravity="center"
-        android:textSize="28dp"
+        android:textSize="28sp"
         />
 
     <RelativeLayout
@@ -28,16 +28,28 @@
         android:layout_alignParentBottom="true"
         android:padding="8dp"
         android:id="@+id/bottom_layout">
+
         <EditText
+            android:id="@+id/message_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/message_edit_text"
             android:layout_centerInParent="true"
-            android:hint="Write here "
-            android:padding="16dp"
-            android:layout_toLeftOf="@id/send_btn"
+            android:layout_toStartOf="@id/send_btn"
+            android:layout_toEndOf="@id/microphone"
             android:background="@drawable/rounded_corner"
-            />
+            android:hint="Write here "
+            android:inputType="textMultiLine"
+            android:padding="16dp" />
+
+        <ImageButton
+            android:id="@+id/microphone"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/mic"
+            android:layout_alignParentStart="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:paddingEnd="5dp" />
+
         <ImageButton
             android:layout_width="48dp"
             android:layout_height="48dp"
@@ -47,13 +59,8 @@
             android:layout_marginStart="10dp"
             android:padding="8dp"
             android:src="@drawable/ic_baseline_send_24"
-            android:background="?attr/selectableItemBackgroundBorderless"
-
-            />
-
+            android:background="?attr/selectableItemBackgroundBorderless"/>
 
     </RelativeLayout>
-
-
 
 </RelativeLayout>
